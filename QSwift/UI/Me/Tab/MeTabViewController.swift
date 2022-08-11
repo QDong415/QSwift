@@ -47,31 +47,43 @@ class MeTabViewController: CommonTableKitViewController {
         /// 创建cell的点击事件
         var cellClickAction = TableRowAction<MeTabCell>(.click) { [weak self] (options :TableRowActionCallback<MeTabCell>) in
             //点击Cell
+            guard let `self` = self else { return  }
+            if AccountManager.shared.toLoginIfNeed(self) {
+                return //去登录界面了
+            }
             let settingViewController = MeSettingController()
             settingViewController.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(settingViewController, animated: true)
+            self.navigationController?.pushViewController(settingViewController, animated: true)
         }
-        let nameRow = TableKitRow<MeTabCell>(item: MeTabModel(imageName: "me_tab_submit", title: "我的动态"), actions: [cellClickAction])//创建cell，并绑定cell的数据+点击事件
+        let nameRow = TableKitRow<MeTabCell>(item: MeTabModel(imageName: "me_tab_submit", title: "设置1"), actions: [cellClickAction])//创建cell，并绑定cell的数据+点击事件
         section.append(row: nameRow) //section添加cell
         
         /// 创建cell的点击事件
         cellClickAction = TableRowAction<MeTabCell>(.click) { [weak self] (options :TableRowActionCallback<MeTabCell>) in
             //点击Cell
+            guard let `self` = self else { return  }
+            if AccountManager.shared.toLoginIfNeed(self) {
+                return //去登录界面了
+            }
             let settingViewController = MeSettingController()
             settingViewController.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(settingViewController, animated: true)
+            self.navigationController?.pushViewController(settingViewController, animated: true)
         }
-        let nameRow2 = TableKitRow<MeTabCell>(item: MeTabModel(imageName: "me_tab_submit", title: "V2TXLivePlayer.PLAY"), actions: [cellClickAction])//创建cell，并绑定cell的数据+点击事件
+        let nameRow2 = TableKitRow<MeTabCell>(item: MeTabModel(imageName: "me_tab_submit", title: "设置2"), actions: [cellClickAction])//创建cell，并绑定cell的数据+点击事件
         section.append(row: nameRow2) //section添加cell
         
         /// 创建cell的点击事件
         cellClickAction = TableRowAction<MeTabCell>(.click) { [weak self] (options :TableRowActionCallback<MeTabCell>) in
             //点击Cell
+            guard let `self` = self else { return  }
+            if AccountManager.shared.toLoginIfNeed(self) {
+                return //去登录界面了
+            }
             let settingViewController = MeSettingController()
             settingViewController.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(settingViewController, animated: true)
+            self.navigationController?.pushViewController(settingViewController, animated: true)
         }
-        let nameRow3 = TableKitRow<MeTabCell>(item: MeTabModel(imageName: "me_tab_submit", title: "V2TXLivePlayer.Stop"), actions: [cellClickAction])//创建cell，并绑定cell的数据+点击事件
+        let nameRow3 = TableKitRow<MeTabCell>(item: MeTabModel(imageName: "me_tab_submit", title: "设置3"), actions: [cellClickAction])//创建cell，并绑定cell的数据+点击事件
         section.append(row: nameRow3) //section添加cell
         
         self.tableKitSections.append(section) //把section添加到[section]
@@ -178,10 +190,6 @@ class MeTabViewController: CommonTableKitViewController {
 //        }
 //        setNeedsStatusBarAppearanceUpdate()
 //    }
-
-    deinit {
-        NSLog("MeTabViewController deinit")
-    }
 }
 
 //extension MeTabViewController {

@@ -15,15 +15,14 @@ class TopicCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     
-    override func awakeFromNib() {
-        print("TopicCell awakeFromNib")
-        super.awakeFromNib()
-    }
-    
-    deinit {
-        print("TopicCell deinit")
-    }
-    
+//    override func awakeFromNib() {
+//        print("TopicCell awakeFromNib")
+//        super.awakeFromNib()
+//    }
+//
+//    deinit {
+//        print("TopicCell deinit")
+//    }
     
     //为了使用systemLayoutSizeFitting自动计算Cell高度，我们在xib里拉好约束后，还需要设置可变高度label的maxWidth
     //方案1：在xib里把label的DesireWidth设置为auto。就不用写代码了
@@ -37,13 +36,15 @@ class TopicCell: UITableViewCell {
         
         if !onlyForGetHeight {
             //如果只是为了计算estimatedHeightForRowAt，就不走这些无用代码了
-            nameLabel.text = model.name
+//            nameLabel.text = model.name
             
             let url = URL(string: QINIU_URL + (model.avatar ?? ""))
             avatarImageView.setImageWithURL(url, placeholderImage: UIImage(named: "user_photo"), options: [
                 .transition(.fade(1))
             ])
         }
+        
+        nameLabel.text = model.name
         
         contentLabel.text = model.content
     }

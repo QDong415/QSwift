@@ -21,16 +21,16 @@ class HomeViewController: CommonUITableViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName:reuseIdentifier, bundle:nil), forCellReuseIdentifier: reuseIdentifier)
         
-        let scrollView = UIScrollView()
-        scrollView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 180)
-        scrollView.contentSize = CGSize.init(width: SCREEN_WIDTH * 3, height: 120)
-        scrollView.backgroundColor = UIColor.yellow
-        
-        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH * 3, height: 180))
-        label.text = "rollView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 120)View.register(UINib(nibName:reuseIdentifier, bundle:nil), forCellReuseIdentifier: reuseIdentifier)"
-        scrollView.addSubview(label)
-        
-        self.tableView.tableHeaderView = scrollView
+//        let scrollView = UIScrollView()
+//        scrollView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 180)
+//        scrollView.contentSize = CGSize.init(width: SCREEN_WIDTH * 3, height: 120)
+//        scrollView.backgroundColor = UIColor.yellow
+//
+//        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH * 3, height: 180))
+//        label.text = "rollView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: 120)View.register(UINib(nibName:reuseIdentifier, bundle:nil), forCellReuseIdentifier: reuseIdentifier)"
+//        scrollView.addSubview(label)
+//
+//        self.tableView.tableHeaderView = scrollView
         
         showCenterLoadingView(true)
         
@@ -42,10 +42,6 @@ class HomeViewController: CommonUITableViewController {
         if (mainArray.isEmpty) {
             executeRequireList(isRefresh: true)
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
     
     //触发了下拉刷新，子类需要重写，一般在这里请求第一页数据
@@ -64,7 +60,7 @@ class HomeViewController: CommonUITableViewController {
         
         //如果是加载更多，就加上参数page；否则（下拉刷新）就强制设为1，如果服务器要求是0，就改成"0"
         var params = ["page": isRefresh ? "1" : String(self.page)]
-        params["keyword"] = "小" //keyword传入奇怪的参数，就可以让服务器返回空列表
+//        params["keyword"] = "小" //keyword传入奇怪的参数，就可以让服务器返回空列表
 //        params["error"] = "1" //传入这个error为1，服务器就返回code为0 就是失败
         HttpManager.shared.request(path: "user/getlist", params: params, success: { [weak self] (response : BaseResponse<BasePagerModel<UserSimpleModel>>) in
             
