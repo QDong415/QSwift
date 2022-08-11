@@ -1,7 +1,8 @@
 
-## 新IOS开发者容易犯下的错误：
-
 ![列表界面](https://upload-images.jianshu.io/upload_images/26002059-7ec9ff698bb9c047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+## 新IOS开发者容易犯下的错误：
 
 - ❌ 工程中每个tableviewVC都有一个自己的xib
 因为：浪费空间。新建VC要复制两个文件，还需要重新去拉xib和vc的tableview
@@ -80,7 +81,7 @@
 
 [后续会一直更新，请给个star](https://github.com/QDong415/QSwift)
 
-## Author：DQ  
+## Author：DQ  285275534@qq.com
 我的其他开源库，给个Star鼓励我写更多好库：
 
 [IOS Swift项目框架模版Demo，教科书级标准。轻量、规范、易懂、易移植、解耦](https://github.com/QDong415/QSwift)
