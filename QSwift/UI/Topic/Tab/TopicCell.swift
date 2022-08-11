@@ -36,15 +36,13 @@ class TopicCell: UITableViewCell {
         
         if !onlyForGetHeight {
             //如果只是为了计算estimatedHeightForRowAt，就不走这些无用代码了
-//            nameLabel.text = model.name
+            nameLabel.text = model.name
             
             let url = URL(string: QINIU_URL + (model.avatar ?? ""))
             avatarImageView.setImageWithURL(url, placeholderImage: UIImage(named: "user_photo"), options: [
                 .transition(.fade(1))
             ])
         }
-        
-        nameLabel.text = model.name
         
         contentLabel.text = model.content
     }
