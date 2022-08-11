@@ -100,7 +100,7 @@ class ModifyViewController: CommonTableKitViewController {
                 SVProgressHUD.showError(withStatus: response.message)
             }
             
-        }, failure: { [weak self] error in
+        }, failure: { error in
             //网络请求失败，服务器关闭或者json解析失败
             SVProgressHUD.showError(withStatus: commonNetworkRequestFailure)
         })

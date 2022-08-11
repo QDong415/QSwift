@@ -54,14 +54,11 @@ class AccountLoginViewController: CommonTableKitViewController {
                     SVProgressHUD.showError(withStatus: response.message)
                 }
                 
-            }, failure: { [weak self] error in
+            }, failure: { error in
                 
                 //网络请求失败，服务器关闭或者json解析失败
                 SVProgressHUD.dismiss()
                 SVProgressHUD.showError(withStatus: commonNetworkRequestFailure)
-                guard let `self` = self else { return }
-                
-
             })
         }
         let buttonRow = TableKitRow<TableKitSingleButtonCell>(item: tkButtonModel, actions: [completeClickAction])
