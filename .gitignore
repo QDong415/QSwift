@@ -12,27 +12,3 @@
 
 # OS X
 .DS_Store
-
-### Xcode ###
-build/
-/.build
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-*.xccheckout
-*.moved-aside
-DerivedData/
-*.xcuserstate
-Carthage/
-Cartfile.resolved
-xcenv.sh
-*.swp
-*.hmap
-*.ipa
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
-/Packages
