@@ -21,6 +21,7 @@ class RootTabViewController: UITabBarController ,UIAlertViewDelegate {
         
         setupSeparateColor();
 
+        self.tabBar.tintColor = UIColor.init(red: 0.23, green: 0.61, blue: 0.99, alpha: 1.0)
     }
     
     //首次安装App，会弹出是否允许访问网络的弹框。用户点击确认后，进入这里，重新请求数据

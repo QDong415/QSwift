@@ -1,6 +1,8 @@
 
 ## 新IOS开发者容易犯下的错误：
 
+![列表界面](https://upload-images.jianshu.io/upload_images/26002059-7ec9ff698bb9c047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ❌ 工程中每个tableviewVC都有一个自己的xib
 因为：浪费空间。新建VC要复制两个文件，还需要重新去拉xib和vc的tableview
 ✅  封装好BaseTableViewController，并且BaseTableViewController使用frame而不是xib。你用xib拉约束，可能加载时间为0.01秒，但是我用frame+viewDidLayoutSubView ，加载时间为0.005秒。
