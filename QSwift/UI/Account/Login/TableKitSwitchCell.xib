@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="KGk-i7-Jjw" userLabel="TableKitSwitchCell" customClass="TableKitSwitchCell" customModule="QTableKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-bZ-0zE">
+                        <rect key="frame" x="24" y="13" width="102" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="102" id="xDM-h0-Eqe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.32584699988365173" green="0.32583722472190857" blue="0.32584279775619507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIv-An-Ivb">
+                        <rect key="frame" x="253" y="7" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="Jva-bZ-0zE" secondAttribute="centerY" id="0uS-nl-z8Y"/>
+                    <constraint firstItem="Jva-bZ-0zE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="ALL-kF-4SA"/>
+                    <constraint firstItem="IIv-An-Ivb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dO4-0W-3XS"/>
+                    <constraint firstAttribute="trailing" secondItem="IIv-An-Ivb" secondAttribute="trailing" constant="18" id="yqN-JA-664"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="Jva-bZ-0zE" id="FWp-g6-fSg"/>
+                <outlet property="uiSwitch" destination="IIv-An-Ivb" id="Lm5-LD-mMF"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="189.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="Yl9-Tf-e1y" userLabel="ContactCell" customClass="ContactCell" customModule="QSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yl9-Tf-e1y" id="yvi-FS-GlE">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-qY-bwm">
+                        <rect key="frame" x="18" y="12" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="IWC-rg-8E1"/>
+                            <constraint firstAttribute="height" constant="44" id="Kvo-jv-dtL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="148" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-PA-ie2">
+                        <rect key="frame" x="74" y="24" width="42" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="148" id="f4b-Pl-2pK"/>
+                            <constraint firstAttribute="height" constant="30" id="wi2-d7-EpW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.32584699989999999" green="0.32583722469999998" blue="0.32584279779999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f4b-Pl-2pK"/>
+                                <exclude reference="wi2-d7-EpW"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ugJ-PA-ie2" firstAttribute="leading" secondItem="hXM-qY-bwm" secondAttribute="trailing" constant="12" id="3bq-X1-SUb"/>
+                    <constraint firstAttribute="centerY" secondItem="ugJ-PA-ie2" secondAttribute="centerY" id="JIT-80-Ud7"/>
+                    <constraint firstItem="ugJ-PA-ie2" firstAttribute="top" secondItem="yvi-FS-GlE" secondAttribute="top" constant="8" id="Utc-Jd-6Dp"/>
+                    <constraint firstAttribute="centerY" secondItem="hXM-qY-bwm" secondAttribute="centerY" id="mvL-vo-zVi"/>
+                    <constraint firstAttribute="centerY" secondItem="ugJ-PA-ie2" secondAttribute="centerY" id="ryL-Gn-4qN"/>
+                    <constraint firstItem="hXM-qY-bwm" firstAttribute="leading" secondItem="yvi-FS-GlE" secondAttribute="leading" constant="18" id="xaP-EX-Dfu"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Utc-Jd-6Dp"/>
+                        <exclude reference="ryL-Gn-4qN"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="hXM-qY-bwm" id="uNP-gM-TOi"/>
+                <outlet property="nameLabel" destination="ugJ-PA-ie2" id="aDu-n1-hSt"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="158.32083958020991"/>
+        </tableViewCell>
+    </objects>
+</document>

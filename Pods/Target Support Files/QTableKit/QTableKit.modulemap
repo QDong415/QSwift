@@ -1,0 +1,6 @@
+framework module QTableKit {
+  umbrella header "QTableKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
